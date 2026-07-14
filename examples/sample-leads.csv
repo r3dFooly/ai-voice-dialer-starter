@@ -1,0 +1,5 @@
+first_name,last_name,phone,email,state,segment,external_id,tags,consent_date,consent_source,notes
+Jordan,Rivera,+13055551212,jordan.rivera@example.com,FL,segment_a,CRM-1001,"webform,warm",2026-07-01,landing_page_v2,Requested a callback
+Sam,Lee,(213) 555-0148,sam.lee@example.com,CA,segment_a,CRM-1002,webform,2026-07-02,facebook_lead_form,All-party consent state - disclose recording
+Taylor,Nguyen,4155550193,,TX,segment_b,CRM-1003,"data,cold",,,No consent on file - do not autodial until verified
+Alex,Morgan,+16175550175,alex.morgan@example.com,MA,segment_b,CRM-1004,"webform,warm",2026-06-28,quote_tool,
