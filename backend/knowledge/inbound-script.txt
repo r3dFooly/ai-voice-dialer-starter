@@ -1,0 +1,23 @@
+# ===========================================================================
+# INBOUND CALL SCRIPT — BLANK TEMPLATE
+# Used when the consumer calls YOU (callback or new inbound). The turn loop loads
+# this with an override so the agent knows it is ANSWERING a call — it must NOT
+# use the outbound "just following up on your inquiry" opener.
+# ===========================================================================
+
+GREETING (inbound)
+"Thanks for calling {{COMPANY_NAME}}, this is {{AGENT_PERSONA_NAME}}. How can I
+help you today?"
+
+INTENT CAPTURE
+# TODO: figure out why they called and route accordingly.
+- Returning a missed call / callback -> resume qualification (see vertical-script).
+- New question about {{PRODUCT}} -> answer briefly, then qualify.
+- Wants a human now -> warm-transfer if within criteria.
+
+RULES
+- Do not assume prior context you don't have; ask.
+- Same hard rules as the system prompt (no invented facts, honor opt-outs).
+
+CLOSE
+"{{CLOSING_LINE}}"

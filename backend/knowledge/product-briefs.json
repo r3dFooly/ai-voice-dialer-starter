@@ -1,0 +1,10 @@
+{
+  "_comment": "BLANK TEMPLATE. Short factual briefs on what you sell/offer, referenced by the prompt. Keyed by a product/segment id that can match a queue row's `segment`. Keep claims accurate and supportable.",
+  "generic": {
+    "label": "Generic offering",
+    "one_liner": "TODO: one sentence on the product/service.",
+    "key_points": ["TODO", "TODO"],
+    "qualifying_questions": ["TODO"],
+    "do_not_say": ["TODO: anything non-compliant or unsupportable for your vertical"]
+  }
+}

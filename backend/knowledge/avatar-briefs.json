@@ -1,0 +1,10 @@
+{
+  "_comment": "BLANK TEMPLATE. Optional lead-persona briefs the prompt can reference to tailor tone. Keyed by an arbitrary avatar id. Fill for your audience or leave as the single generic entry.",
+  "generic": {
+    "label": "Generic prospect",
+    "description": "TODO: describe this audience segment in a sentence.",
+    "motivations": ["TODO"],
+    "concerns": ["TODO"],
+    "tone_guidance": "Warm, plain-language, respectful of their time."
+  }
+}

@@ -1,0 +1,106 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-canvas: #0f0f1a;
+  --color-panel: #16213e;
+  --color-panel-hi: #1a2645;
+  --color-line: #2a3458;
+  --color-line-soft: #1f2a4a;
+  --color-ink: #e6e9f2;
+  --color-ink-dim: #a0a8c2;
+  --color-ink-mute: #6b7396;
+  --color-teal: #0f9b8e;
+  --color-teal-dim: #0c7d72;
+  --color-gold: #d4a843;
+  --color-danger: #e74c3c;
+  --color-good: #25d3a4;
+
+  /* Typography — IBM Plex families are optional; fall back to the system
+     sans/mono stack when the fonts are not installed. */
+  --font-sans: var(--font-plex-sans);
+  --font-mono: var(--font-plex-mono);
+
+  /* Type scale — tight, dense, tool-feel. Pairs with the line-height
+     siblings so Tailwind v4 picks them up via `text-xs` etc. utilities. */
+  --text-xs: 11px;
+  --text-xs--line-height: 16px;
+  --text-sm: 12px;
+  --text-sm--line-height: 18px;
+  --text-base: 13px;
+  --text-base--line-height: 20px;
+  --text-md: 14px;
+  --text-md--line-height: 20px;
+  --text-lg: 16px;
+  --text-lg--line-height: 24px;
+  --text-xl: 24px;
+  --text-xl--line-height: 32px;
+  --text-2xl: 32px;
+  --text-2xl--line-height: 40px;
+
+  /* Letter-spacing — restrained. Default is 0; only hero numbers and
+     uppercase tracked labels deviate. */
+  --tracking-tight: -0.01em;
+  --tracking-normal: 0;
+  --tracking-label: 0.05em;
+
+  /* Motion — snap easing. duration-base is the default for state changes;
+     -fast for hover, -slow for modal/drawer transitions. */
+  --duration-fast: 100ms;
+  --duration-base: 150ms;
+  --duration-slow: 250ms;
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+
+  /* Density — card padding. Default is 20px; 16px for KPI rows, 24px
+     for hero sections. */
+  --padding-compact: 16px;
+  --padding-default: 20px;
+  --padding-spacious: 24px;
+
+  /* shadcn/ui aliases — point at the token palette so shadcn primitives
+     (bg-background, text-foreground, etc.) resolve without a parallel system. */
+  --color-background: var(--color-canvas);
+  --color-foreground: var(--color-ink);
+  --color-card: var(--color-panel);
+  --color-card-foreground: var(--color-ink);
+  --color-popover: var(--color-panel);
+  --color-popover-foreground: var(--color-ink);
+  --color-primary: var(--color-teal);
+  --color-primary-foreground: var(--color-canvas);
+  --color-secondary: var(--color-panel-hi);
+  --color-secondary-foreground: var(--color-ink);
+  --color-muted: var(--color-panel-hi);
+  --color-muted-foreground: var(--color-ink-mute);
+  --color-accent: var(--color-teal-dim);
+  --color-accent-foreground: var(--color-ink);
+  --color-destructive: var(--color-danger);
+  --color-destructive-foreground: var(--color-ink);
+  --color-border: var(--color-line);
+  --color-input: var(--color-line);
+  --color-ring: var(--color-teal);
+  --radius: 0.5rem;
+
+  /* Neutral chart accent tokens. Used by charts + status pills; swap the hex
+     values for a brand palette without touching component code. */
+  --color-accent-1: #3b82f6;
+  --color-accent-2: #f4c430;
+  --color-money-positive: var(--color-good);
+  --color-money-negative: var(--color-danger);
+  --color-status-active: var(--color-good);
+  --color-status-termed: var(--color-danger);
+  --color-status-canceled: var(--color-danger);
+  --color-status-pending-cancel: var(--color-gold);
+}
+
+html, body { background: #0f0f1a; color: #e6e9f2; }
+body { font-family: var(--font-plex-sans), Inter, ui-sans-serif, system-ui, sans-serif; }
+
+/* Subtle scrollbar in the dark theme */
+* { scrollbar-color: #2a3458 transparent; scrollbar-width: thin; }
+*::-webkit-scrollbar { width: 8px; height: 8px; }
+*::-webkit-scrollbar-thumb { background: #2a3458; border-radius: 4px; }
+*::-webkit-scrollbar-track { background: transparent; }
+
+/* Density toggle — Compact tightens table row padding. */
+[data-density="compact"] td,
+[data-density="compact"] th { padding-top: 0.3rem; padding-bottom: 0.3rem; }
+[data-density="compact"] .card-row-expand { padding-top: 0.5rem; padding-bottom: 0.5rem; }

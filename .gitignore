@@ -1,0 +1,29 @@
+# deps
+node_modules/
+**/node_modules/
+
+# env / secrets — NEVER commit real credentials
+.env
+.env.*
+!.env.example
+**/.env
+**/.env.*
+!**/.env.example
+
+# next.js
+dashboard/.next/
+dashboard/out/
+dashboard/next-env.d.ts
+
+# logs / runtime
+*.log
+logs/
+pids/
+*.pid
+
+# os
+.DS_Store
+Thumbs.db
+
+# typescript build info
+*.tsbuildinfo
